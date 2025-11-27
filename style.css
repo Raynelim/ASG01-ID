@@ -20,9 +20,9 @@ header {
 
 .nav-container {
     display: flex;
-    justify-content: center; /* center title */
+    justify-content: center; /* center title in desktop */
     align-items: center;
-    position: relative; /* for absolute login-register */
+    position: relative; /* for absolute login-register in desktop */
     flex-wrap: wrap;
 }
 
@@ -81,7 +81,7 @@ header {
     background-color: #555; /* box hover effect */
 }
 
-/* Introduction */
+/* Introduction Section */
 .introduction {
     text-align: center;
     padding: 50px 20px 30px 20px;
@@ -115,34 +115,55 @@ header {
 
 .about-content {
     max-height: 150px; /* box cuts off content */
-    overflow-y: auto; /* scrollable */
+    overflow-y: auto;   /* scrollable */
     padding-right: 10px;
-}
-
-.about-content p {
-    font-size: 1rem;
-    line-height: 1.5rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Stack nav elements vertically */
     .nav-container {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Title stays first */
+    .title {
+        order: 0;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    /* Login/Register below title */
     .login-register {
         position: static;
+        order: 1;
         margin-top: 10px;
     }
+
+    /* Menu below login/register, centered links */
     .menu {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+        margin-top: 10px;
     }
+
+    /* Introduction padding */
     .introduction {
         padding: 30px 10px;
     }
+
+    /* About section centered */
     .about {
         margin: 10px;
         padding: 15px;
+        text-align: center; /* centers heading and text */
+    }
+
+    .about-content {
+        max-height: 150px; /* scrollable */
+        overflow-y: auto;
+        padding-right: 10px;
     }
 }
