@@ -103,6 +103,7 @@ header {
     border-radius: 6px;
     width: 100%;
     max-width: 800px; /* Increased for better desktop use */
+    margin: 0 auto; /* center the menu container within its parent */
 }
 
 
