@@ -1,0 +1,192 @@
+/* Merch page specific styles */
+
+/* Header / Nav - page-specific copy so Merch page contains its own header/menu/title rules */
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+/* Nav Container: Manages the vertical stack (Row 1 on top of Row 2) */
+.nav-container {
+    display: flex;
+    flex-direction: column; /* Stack the header-top and menu vertically */
+    align-items: center;
+    gap: 15px; /* Gap between the top row and the menu */
+    position: relative; /* Keep relative in case of future absolute elements */
+}
+
+/* Header Top (Row 1): Manages Title and Login/Register horizontally */
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; /* Takes full width of the header container */
+    padding: 0 5px; /* Small horizontal padding */
+    position: relative; /* make this the positioning context for the centered title */
+}
+
+/* Title */
+.title {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* allow clicks to pass through to buttons/links */
+}
+
+.title h1 { font-size: 1.8rem; }
+
+/* Login/Register */
+.login-register {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* keep login/register aligned to the right */
+}
+
+.login-register button,
+.login-register a {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.login-register button:hover,
+.login-register a:hover { background-color: #777; }
+
+/* Menu (Row 2): Centered below the header-top */
+.menu {
+    display: flex;
+    justify-content: center; /* center links */
+    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 800px; /* Increased for better desktop use */
+    margin: 0 auto; /* center the menu container within its parent */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+
+.menu a:hover { background-color: #555; }
+
+.merch-intro {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.merch-section {
+    max-width: 1100px;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.merch-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.merch-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.merch-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+}
+
+.merch-card .desc {
+    margin: 0 0 12px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.meta {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.buy-btn {
+    background: #ff9900;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.buy-btn:hover { background: #ffb84d; }
+
+@media (max-width: 768px) {
+    .merch-intro { padding: 18px; margin: 12px; }
+    .merch-section { padding: 0 12px; }
+    .merch-card img { height: 140px; }
+
+    /* Mobile fallback for header/menu in Merch page */
+    .title {
+        position: static;
+        transform: none;
+        pointer-events: auto;
+        text-align: center;
+    }
+
+    .login-register {
+        position: static;
+        margin-top: 10px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+}
+

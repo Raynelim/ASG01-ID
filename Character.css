@@ -203,4 +203,17 @@ header {
         position: static;
         margin-top: 10px;
     }
+    
+    /* Make menu links stack vertically inside the menu box on mobile */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .menu a {
+        width: 90%;
+        text-align: center;
+    }
 }
