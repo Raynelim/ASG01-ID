@@ -6,7 +6,7 @@ body {
 
 /* Header */
 header {
-    background-color: #222;
+    background-color: #02400c;
     color: white;
     padding: 15px 20px;
     border-bottom-left-radius: 8px;
@@ -54,7 +54,7 @@ header {
 
 .login-register button,
 .login-register a {
-    background-color: #555;
+    background-color: #02400c;
     border: none;
     color: white;
     padding: 8px 12px;
@@ -66,14 +66,14 @@ header {
 }
 
 .login-register button:hover,
-.login-register a:hover { background-color: #777; }
+.login-register a:hover { background-color: #035a0f; }
 
 /* Menu (Row 2): Centered below the header-top */
 .menu {
     display: flex;
     justify-content: center; /* center links */
     gap: 20px;
-    background-color: #333;
+    background-color: #1a2e0a;
     padding: 10px;
     border-radius: 6px;
     width: 100%;
@@ -90,7 +90,7 @@ header {
     font-weight: 600;
 }
 
-.menu a:hover { background-color: #555; }
+.menu a:hover { background-color: #02400c; }
 
 .merch-intro {
     max-width: 900px;
@@ -162,7 +162,7 @@ header {
 }
 
 .buy-btn {
-    background: #ff9900;
+    background: #b9a300;
     color: white;
     text-decoration: none;
     padding: 8px 14px;
@@ -170,7 +170,7 @@ header {
     font-weight: 600;
 }
 
-.buy-btn:hover { background: #ffb84d; }
+.buy-btn:hover { background: #d4c100; }
 
 /* Cart Popup Styles */
 .cart-popup {
