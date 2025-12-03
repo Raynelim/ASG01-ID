@@ -24,5 +24,5 @@ form.addEventListener("submit", function(event) {
     // If everything is fine
     alert("Registration successful!");
     localStorage.setItem("LoggedIn", "true");
-    window.location.href = "Home.html"; // go to home page
+    window.location.href = "index.html"; // go to home page
 });
