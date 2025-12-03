@@ -23,8 +23,8 @@ function showAddToCartPopup() {
         popup.classList.remove('show');
         setTimeout(() => {
             popup.remove();
-        }, 300);
-    }, 3000);
+        }, 100);
+    }, 1000);
 }
 
 // Add event listeners to all "Add to Cart" buttons
