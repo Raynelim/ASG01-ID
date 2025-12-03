@@ -13,7 +13,7 @@ body {
 
 /* Header / Nav */
 header {
-    background-color: #02400c;
+    background-color: #1a2e0a;
     color: white;
     padding: 15px 20px;
     border-bottom-left-radius: 8px;
@@ -62,7 +62,7 @@ header {
 }
 
 .login-register button {
-    background-color: #02400c;
+    background-color: #1a2e0a;
     border: none;
     color: white;
     padding: 8px 12px;
@@ -73,13 +73,13 @@ header {
 }
 
 .login-register button:hover {
-    background-color: #035a0f;
+    background-color: #02400c;
 }
 
 /* Anchor-styled buttons for navigation (login/register links) */
 .login-register a {
     display: inline-block;
-    background-color: #02400c;
+    background-color: #1a2e0a;
     color: white;
     text-decoration: none;
     padding: 8px 12px;
@@ -90,7 +90,7 @@ header {
 }
 
 .login-register a:hover {
-    background-color: #035a0f;
+    background-color: #02400c;
 }
 
 /* Menu (Row 2): Centered below the header-top */
@@ -98,7 +98,7 @@ header {
     display: flex;
     justify-content: center; /* center links */
     gap: 20px;
-    background-color: #1a2e0a;
+    background-color: #02400c;
     padding: 10px;
     border-radius: 6px;
     width: 100%;
@@ -117,17 +117,19 @@ header {
 }
 
 .menu a:hover {
-    background-color: #02400c; /* box hover effect */
+    background-color: #1a2e0a; /* box hover effect */
 }
 
 /* Introduction Section */
 .introduction {
     text-align: center;
     padding: 50px 20px 30px 20px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.85);
     margin: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .introduction h2 {
@@ -143,10 +145,12 @@ header {
 .about {
     margin: 20px;
     padding: 25px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.88);
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .about h3 {

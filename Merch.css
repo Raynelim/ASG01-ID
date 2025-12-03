@@ -6,7 +6,7 @@ body {
 
 /* Header */
 header {
-    background-color: #02400c;
+    background-color: #1a2e0a;
     color: white;
     padding: 15px 20px;
     border-bottom-left-radius: 8px;
@@ -54,7 +54,7 @@ header {
 
 .login-register button,
 .login-register a {
-    background-color: #02400c;
+    background-color: #1a2e0a;
     border: none;
     color: white;
     padding: 8px 12px;
@@ -66,14 +66,14 @@ header {
 }
 
 .login-register button:hover,
-.login-register a:hover { background-color: #035a0f; }
+.login-register a:hover { background-color: #02400c; }
 
 /* Menu (Row 2): Centered below the header-top */
 .menu {
     display: flex;
     justify-content: center; /* center links */
     gap: 20px;
-    background-color: #1a2e0a;
+    background-color: #02400c;
     padding: 10px;
     border-radius: 6px;
     width: 100%;
@@ -90,7 +90,7 @@ header {
     font-weight: 600;
 }
 
-.menu a:hover { background-color: #02400c; }
+.menu a:hover { background-color: #1a2e0a; }
 
 .merch-intro {
     max-width: 900px;
