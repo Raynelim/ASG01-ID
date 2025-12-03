@@ -149,7 +149,7 @@ header {
 
 .characters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-items: center;
 }
@@ -215,5 +215,10 @@ header {
     .menu a {
         width: 90%;
         text-align: center;
+    }
+
+    /* Mobile: 1 character per row */
+    .characters-grid {
+        grid-template-columns: 1fr;
     }
 }
