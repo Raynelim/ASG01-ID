@@ -47,7 +47,7 @@ input {
 
 
 
-/* Register button */
+/* Cart button */
 button {
     width: 100%; /* full width inside container */
     padding: 10px;
@@ -64,20 +64,20 @@ button:hover {
     background-color: #555;
 }
 
-/* Signup text under login */
-.Login-text {
+/* Checkout text under cart */
+.checkout-text {
     margin-top: 15px;
     font-size: 0.9rem;
     text-align: center; /* center the text */
 }
 
-.Login-text a {
+.checkout-text a {
     text-decoration: none;
     color: #007BFF;
     font-weight: bold;
 }
 
-.Login-text a:hover {
+.checkout-text a:hover {
     text-decoration: underline;
 }
 

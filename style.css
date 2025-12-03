@@ -126,7 +126,8 @@ header {
     padding: 50px 20px 30px 20px;
     background-color: #fff;
     margin: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .introduction h2 {
@@ -137,61 +138,37 @@ header {
 .introduction p {
     font-size: 1rem;
 }
-/* Characters Section */
-.characters-section {
-    padding: 30px;
-    text-align: center;
-}
 
-.characters-section h2 {
-    margin-bottom: 40px;
-}
-
-.characters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.character-box {
+/* About Section */
+.about {
+    margin: 20px;
+    padding: 25px;
     background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    width: 270px;
-    transition: all 0.3s;
-    min-height: 170px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
-.character-box img {
-    width: 100%;
-    border-radius: 6px;
+.about h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-/* Hover effect */
-.character-box:hover {
-    border-color: #ff9900;
-    box-shadow: 0 0 10px #ff9900;
-    transform: translateY(-3px);
+.about-content {
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-/* Character name */
-.character-box p {
-    margin: 0;
-    font-weight: bold;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    /* Header Top still works well, keeping Title left, Buttons right */
+    .header-top {
+        padding: 0;
     }
 
+    /* Make title and login/register flow on mobile so buttons fit */
     .title {
         position: static;
         transform: none;
@@ -202,9 +179,17 @@ header {
     .login-register {
         position: static;
         margin-top: 10px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
     }
-    
-    /* Make menu links stack vertically inside the menu box on mobile */
+
+    .login-register a,
+    .login-register button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -215,5 +200,20 @@ header {
     .menu a {
         width: 90%;
         text-align: center;
+    }
+
+    /* Main content mobile adjustments */
+    .introduction {
+        padding: 30px 10px;
+        margin: 10px;
+    }
+
+    .about {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .about-content {
+        text-align: left;
     }
 }

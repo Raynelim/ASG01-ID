@@ -1,6 +1,10 @@
 /* Merch page specific styles */
 
-/* Header / Nav - page-specific copy so Merch page contains its own header/menu/title rules */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
 header {
     background-color: #222;
     color: white;
@@ -10,7 +14,7 @@ header {
 
 }
 
-/* Nav Container: Manages the vertical stack (Row 1 on top of Row 2) */
+/* Nav Container */
 .nav-container {
     display: flex;
     flex-direction: column; /* Stack the header-top and menu vertically */
@@ -19,7 +23,7 @@ header {
     position: relative; /* Keep relative in case of future absolute elements */
 }
 
-/* Header Top (Row 1): Manages Title and Login/Register horizontally */
+/* Header Top */
 .header-top {
     display: flex;
     justify-content: flex-start;
@@ -173,6 +177,11 @@ header {
     .merch-section { padding: 0 12px; }
     .merch-card img { height: 140px; }
 
+    /* Header mobile adjustments */
+    .header-top {
+        padding: 0;
+    }
+
     /* Mobile fallback for header/menu in Merch page */
     .title {
         position: static;
@@ -187,6 +196,25 @@ header {
         display: flex;
         gap: 8px;
         justify-content: center;
+    }
+
+    .login-register a,
+    .login-register button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Stack menu vertically on mobile */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .menu a {
+        width: 90%;
+        text-align: center;
     }
 }
 
