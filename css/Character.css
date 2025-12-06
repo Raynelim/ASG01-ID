@@ -6,27 +6,28 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a1f0f;
+    color: #e8f5e9;
+    line-height: 1.6;
 }
 
 /* Header / Nav */
 header {
-    background-color: #1a2e0a;
+    background: linear-gradient(135deg, #0a2815 0%, #0f4c28 100%);
     color: white;
     padding: 15px 20px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Nav Container: Manages the vertical stack (Row 1 on top of Row 2) */
 .nav-container {
     display: flex;
-    flex-direction: column; /* Stack the header-top and menu vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 15px; /* Gap between the top row and the menu */
-    position: relative; /* Keep relative in case of future absolute elements */
+    gap: 15px;
+    position: relative;
 }
 
 /* NEW: Header Top (Row 1): Manages Title and Login/Register horizontally */
@@ -34,9 +35,9 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%; /* Takes full width of the header container */
-    padding: 0 5px; /* Small horizontal padding */
-    position: relative; /* make this the positioning context for the centered title */
+    width: 100%;
+    padding: 0 5px;
+    position: relative;
 }
 
 /* Title */
@@ -46,143 +47,354 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* allow clicks to pass through to buttons/links */
+    pointer-events: none;
 }
 
 .title h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Login/Register */
 .login-register {
-    /* REMOVED absolute positioning to allow it to sit in the flow of header-top */
     display: flex;
     gap: 10px;
-    margin-left: auto; /* keep login/register aligned to the right */
+    margin-left: auto;
 }
 
 .login-register button {
-    background-color: #1a2e0a;
+    background-color: #66bb6a;
     border: none;
-    color: white;
+    color: #0a1f0f;
     padding: 8px 12px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 0;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    font-weight: 600;
 }
 
 .login-register button:hover {
-    background-color: #02400c;
+    background-color: #81c784;
+    transform: translateY(-2px);
 }
 
 /* Anchor-styled buttons for navigation (login/register links) */
 .login-register a {
     display: inline-block;
-    background-color: #1a2e0a;
-    color: white;
+    background-color: #66bb6a;
+    color: #0a1f0f;
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 0;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .login-register a:hover {
-    background-color: #02400c;
+    background-color: #81c784;
+    transform: translateY(-2px);
 }
 
 /* Menu (Row 2): Centered below the header-top */
 .menu {
     display: flex;
-    justify-content: center; /* center links */
+    justify-content: center;
     gap: 20px;
-    background-color: #02400c;
+    background-color: rgba(10, 31, 15, 0.95);
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 0;
     width: 100%;
-    max-width: 800px; /* Increased for better desktop use */
-    margin: 0 auto; /* center the menu container within its parent */
+    margin: 0;
 }
 
-
 .menu a {
-    color: white;
+    color: #a5d6a7;
     text-decoration: none;
     padding: 8px 15px;
-    border-radius: 4px;
-    transition: background 0.3s;
+    border-radius: 0;
+    transition: all 0.3s;
     font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #66bb6a;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.menu a:hover::after {
+    width: 80%;
 }
 
 .menu a:hover {
-    background-color: #1a2e0a; /* box hover effect */
+    color: #c8e6c9;
 }
 
 /* Introduction Section */
 .introduction {
     text-align: center;
-    padding: 50px 20px 30px 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 8px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #0a2815 0%, #0f4c28 100%);
+    margin: 0;
+    border-radius: 0;
 }
 
 .introduction h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #e8f5e9;
+    font-weight: 700;
 }
 
 .introduction p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #c8e6c9;
 }
+
 /* Characters Section */
 .characters-section {
-    padding: 30px;
+    padding: 80px 40px;
     text-align: center;
+    background-color: #0f2a18;
 }
 
 .characters-section h2 {
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #a5d6a7;
+    font-weight: 700;
 }
 
 .characters-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .character-box {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    background: #1a3d26;
+    border: 2px solid #2e5d3f;
+    border-radius: 0;
     text-decoration: none;
-    color: #333;
-    padding: 10px;
-    width: 270px;
+    color: #e8f5e9;
+    padding: 20px;
     transition: all 0.3s;
-    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .character-box img {
     width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    border-radius: 0;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
 }
 
-/* Hover effect */
 .character-box:hover {
-    border-color: #b9a300;
-    box-shadow: 0 0 10px #b9a300;
-    transform: translateY(-3px);
+    border-color: #66bb6a;
+    box-shadow: 0 8px 25px rgba(102, 187, 106, 0.3);
+    transform: translateY(-5px);
 }
 
-/* Character name */
+.character-box:hover img {
+    transform: scale(1.05);
+}
+
 .character-box p {
     margin: 0;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #a5d6a7;
+}
+
+/* Character Stats Section */
+.character-stats {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #0a2815 0%, #0f4c28 100%);
+    text-align: center;
+}
+
+.character-stats h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #a5d6a7;
+    font-weight: 700;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: #1a3d26;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid #2e5d3f;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(102, 187, 106, 0.3);
+    border-color: #66bb6a;
+}
+
+.stat-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.stat-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #a5d6a7;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: #c8e6c9;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.stat-link {
+    color: #66bb6a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s;
+}
+
+.stat-link:hover {
+    color: #81c784;
+}
+
+/* Character Trivia Section */
+.character-trivia {
+    padding: 80px 40px;
+    background-color: #0a1f0f;
+    text-align: center;
+}
+
+.character-trivia h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #a5d6a7;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #81c784;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.trivia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trivia-card {
+    background: #1a3d26;
+    padding: 35px 25px;
+    text-align: left;
+    border-left: 4px solid #66bb6a;
+    transition: all 0.3s;
+    border: 1px solid #2e5d3f;
+}
+
+.trivia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 187, 106, 0.3);
+    border-color: #66bb6a;
+}
+
+.trivia-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #a5d6a7;
+    font-weight: 700;
+}
+
+.trivia-card p {
+    color: #c8e6c9;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #071f11 0%, #0a2815 100%);
+    color: white;
+    padding: 60px 40px 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+}
+
+.footer-section h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #66bb6a;
+    font-weight: 700;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #c8e6c9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #66bb6a;
+}
+
+.footer-section p {
+    color: #c8e6c9;
+    line-height: 1.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #2e5d3f;
+    color: #81c784;
 }
 
 @media (max-width: 768px) {
@@ -197,19 +409,24 @@ header {
         transform: none;
         pointer-events: auto;
         text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
     }
 
     .login-register {
         position: static;
         margin-top: 10px;
+        margin-left: 0;
     }
     
-    /* Make menu links stack vertically inside the menu box on mobile */
     .menu {
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        padding: 5px;
+        padding: 10px;
     }
 
     .menu a {
@@ -217,8 +434,23 @@ header {
         text-align: center;
     }
 
-    /* Mobile: 1 character per row */
     .characters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .introduction h2 {
+        font-size: 2rem;
+    }
+
+    .characters-section h2,
+    .character-stats h2,
+    .character-trivia h2 {
+        font-size: 2rem;
+    }
+
+    .stats-grid,
+    .trivia-grid {
         grid-template-columns: 1fr;
     }
 }
