@@ -1099,6 +1099,10 @@ footer {
         text-align: center;
     }
 
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
     .login-register {
         position: static;
         margin-top: 10px;
@@ -1117,12 +1121,13 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        padding: 5px;
+        padding: 10px;
     }
 
     .menu a {
         width: 90%;
         text-align: center;
+        font-size: 1rem;
     }
 
     /* Main content mobile adjustments */

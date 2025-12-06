@@ -43,7 +43,13 @@ header {
     pointer-events: none; /* allow clicks to pass through to buttons/links */
 }
 
-.title h1 { font-size: 1.8rem; }
+.title h1 {
+    font-size: 2.2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
 /* Login/Register */
 .login-register {
@@ -71,26 +77,45 @@ header {
 /* Menu (Row 2): Centered below the header-top */
 .menu {
     display: flex;
-    justify-content: center; /* center links */
+    justify-content: center;
     gap: 20px;
-    background-color: #02400c;
+    background-color: rgba(10, 31, 15, 0.95);
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 0;
     width: 100%;
-    max-width: 800px; /* Increased for better desktop use */
-    margin: 0 auto; /* center the menu container within its parent */
+    margin: 0;
 }
 
 .menu a {
-    color: white;
+    color: #a5d6a7;
     text-decoration: none;
     padding: 8px 15px;
-    border-radius: 4px;
-    transition: background 0.3s;
+    border-radius: 0;
+    transition: all 0.3s;
     font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
 }
 
-.menu a:hover { background-color: #1a2e0a; }
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #66bb6a;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.menu a:hover::after {
+    width: 80%;
+}
+
+.menu a:hover {
+    color: #c8e6c9;
+}
 
 .merch-intro {
     max-width: 900px;
@@ -255,12 +280,17 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        padding: 5px;
+        padding: 10px;
     }
 
     .menu a {
         width: 90%;
         text-align: center;
+        font-size: 1rem;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
     }
 }
 

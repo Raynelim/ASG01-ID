@@ -42,7 +42,7 @@ header {
 
 /* Title */
 .title {
-    z-index: 2;
+    z-index: 2.2;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -419,7 +419,15 @@ footer {
     .login-register {
         position: static;
         margin-top: 10px;
-        margin-left: 0;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .login-register a,
+    .login-register button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
     }
     
     .menu {
@@ -432,6 +440,7 @@ footer {
     .menu a {
         width: 90%;
         text-align: center;
+        font-size: 1rem;
     }
 
     .characters-grid {
