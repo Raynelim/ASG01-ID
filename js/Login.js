@@ -28,7 +28,7 @@ form.addEventListener("submit", function(event) {
     // If everything is correct
     alert("Login successful!");
     localStorage.setItem("loggedIn", "true");
-    window.location.href = "index.html"; // go to home page
+    window.location.href = "../index.html"; // go to home page
 });
 
 // Forgot password functionality
