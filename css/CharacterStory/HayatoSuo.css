@@ -360,36 +360,35 @@ header {
 }
 
 .abilities-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    background: #2a2a2a;
-    padding: 40px;
-    border-left: 4px solid #22c55e;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-.ability-labels {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 25px;
+.ability-item {
+    background: #2a2a2a;
+    padding: 30px;
+    text-align: center;
+    border-left: 4px solid #22c55e;
+    transition: all 0.3s;
+}
+
+.ability-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.2);
 }
 
 .ability-label {
-    text-align: center;
     font-size: 1.1rem;
     color: #4ade80;
     font-weight: 600;
-}
-
-.ability-ratings {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    margin-bottom: 15px;
 }
 
 .rating {
-    text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #22c55e;
     font-weight: 700;
     font-family: 'Rajdhani', sans-serif;
@@ -548,13 +547,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .ability-labels,
-    .ability-ratings {
-        grid-template-columns: repeat(2, 1fr);
+    .abilities-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .abilities-content {
-        padding: 30px 20px;
+    .ability-item {
+        padding: 25px;
     }
 
     .footer-content {
