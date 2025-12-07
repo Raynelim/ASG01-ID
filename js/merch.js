@@ -18,7 +18,7 @@ function showAddToCartPopup() {
         popup.classList.add('show');
     }, 10);
     
-    // Remove popup after 3 seconds
+    // Remove popup after 1 seconds
     setTimeout(() => {
         popup.classList.remove('show');
         setTimeout(() => {
