@@ -3,21 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Shopping Cart - Windbreaker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/Cart.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Your Cart</h1>
-        <p style="text-align: center; color: #999; margin: 20px 0;">Your shopping cart is currently empty.</p>
-        
-        <!-- Continue shopping link -->
-        <p class="checkout-text">
-            <a href="Merch.html" id="continueShoppingLink">Continue Shopping</a>
-        </p>
-    </div>
+    <header>
+        <div class="nav-container">
+            
+            <!-- ROW 1: Title and Login/Register on the same level -->
+            <div class="header-top">
+                <div class="title">
+                    <h1>Windbreaker</h1>
+                </div>
+                <div class="login-register">
+                    <a href="Login.html">Login</a>
+                    <a href="Cart.html">Cart</a>
+                </div>
+            </div>
+
+            <!-- ROW 2: The menu, stacked below the header-top -->
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="Character.html">Characters</a>
+                <a href="Merch.html">Merch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h2>Your Shopping Cart</h2>
+            <p class="empty-message">Your shopping cart is currently empty.</p>
+            
+            <!-- Continue shopping link -->
+            <div class="cart-actions">
+                <a href="Merch.html" class="continue-shopping-btn">Continue Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Character.html">Characters</a></li>
+                    <li><a href="Merch.html">Merchandise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Watch Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>A fan-made site dedicated to celebrating Windbreaker and its amazing community. Built by fans, for fans.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Windbreaker Fan Site. All rights reserved. This is an unofficial fan site not affiliated with the official Windbreaker production.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
