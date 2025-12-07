@@ -8,22 +8,47 @@
     <link rel="stylesheet" href="../css/Login.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <!-- Email input -->
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter your email">
+    
+    
+    <header>
+        <div class="nav-container">
+            
+            <!-- ROW 1: Title and Login/Register on the same level -->
+            <div class="header-top">
+                <div class="title">
+                    <h1>Windbreaker</h1>
+                </div>
+                <div class="login-register">
+                    <a href="Login.html">Login</a>
+                    <a href="Cart.html">Cart</a>
+                </div>
             </div>
 
-            <!-- Password input -->
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
-                <small><a href="#" id="forgotPassword">Forgot password?</a></small>
+            <!-- ROW 2: The menu, stacked below the header-top -->
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="Character.html">Characters</a>
+                <a href="Merch.html">Merch</a>
             </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <!-- Email input -->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                </div>
+
+                <!-- Password input -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <small><a href="#" id="forgotPassword">Forgot password?</a></small>
+                </div>
 
             <!-- Login button -->
             <button type="submit">Login</button>
